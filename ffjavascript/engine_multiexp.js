@@ -145,7 +145,7 @@ export default function buildMultiexp(curve, groupName) {
         return res;
     }
 
-    G.multiExp = async function multiExpAffine(buffBases, buffScalars, logger, logText) {
+    G.multiExp = async function multiExp(buffBases, buffScalars, logger, logText) {
         return await _multiExp(buffBases, buffScalars, "jacobian", logger, logText);
     };
     G.multiExpAffine = async function multiExpAffine(buffBases, buffScalars, logger, logText) {
